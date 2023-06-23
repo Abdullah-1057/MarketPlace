@@ -10,16 +10,17 @@ const style = {
 const Listings = () => {
   const [listing, setListing] = useState([]);
   const myMarketPlace = useMarketplace(
-    "0xCB423C5feE9730935D2A77387026Ea07FcC1426A"
+    "0x931467BC7e712D2a4C3479227381AA868a98965C"
   );
-  console.log(listing);
+  console.log(myMarketPlace);
 
   useEffect(() => {
     getlistings();
   }, []);
   const getlistings = async () => {
     try {
-      const List = await myMarketPlace.getActiveListings();
+      const List = await myMarketPlace.getAllListings();
+      console.log(List)
       setListing(List);
       // console.log(List);
       // console.log("---------")

@@ -16,7 +16,7 @@ function NFT() {
 
   const address = useAddress()
   const marketplace = useMarketplace(
-    '0xCB423C5feE9730935D2A77387026Ea07FcC1426A',
+    '0x931467BC7e712D2a4C3479227381AA868a98965C',
   )
 
   useEffect(() => {
